@@ -10,23 +10,28 @@ export default function ContactoPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary py-16 md:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+      <section className="relative bg-gradient-to-r from-primary via-primary to-primary-dark py-20 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '32px 32px'}} />
+        <div className="relative mx-auto max-w-4xl px-4 text-center text-white animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 mb-6">
+            <span className="text-xs font-medium tracking-[0.15em] uppercase">Hablemos</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
             Contáctanos
           </h1>
-          <p className="text-lg md:text-xl opacity-90">
+          <p className="text-lg md:text-xl opacity-80">
             Estamos listos para planear tu aventura por Chiapas
           </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4">
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
             {/* Formulario */}
             <div>
-              <h2 className="text-2xl font-bold mb-6">
+              <div className="line-accent mb-5" />
+              <h2 className="text-2xl md:text-3xl font-bold mb-8">
                 Solicita tu Cotización
               </h2>
               <form
@@ -137,7 +142,7 @@ export default function ContactoPage() {
 
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-primary px-8 py-4 font-semibold text-white hover:bg-primary-dark transition-colors text-lg"
+                  className="group w-full rounded-full bg-primary px-8 py-4 font-semibold text-white hover:bg-primary-dark transition-all text-lg shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5"
                 >
                   Enviar Cotización
                 </button>

@@ -74,21 +74,26 @@ const paquetes = [
 export default function PaquetesPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
-        <Image
-          src="/images/lagos-montebello.jpg"
-          alt="Lagos de Montebello"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+      {/* Hero with Ken Burns */}
+      <section className="relative h-[55vh] min-h-[420px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/lagos-montebello.jpg"
+            alt="Lagos de Montebello"
+            fill
+            className="object-cover animate-ken-burns"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark/70" />
+        <div className="relative z-10 text-center text-white px-4 animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 mb-6">
+            <span className="text-xs font-medium tracking-[0.15em] uppercase">Experiencias</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
             Nuestros Paquetes
           </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl opacity-80 max-w-2xl mx-auto">
             Explora nuestros paquetes pensados para que conozcas Chiapas de
             forma cómoda y segura
           </p>
@@ -96,9 +101,10 @@ export default function PaquetesPage() {
       </section>
 
       {/* Intro */}
-      <section className="py-12 bg-white">
+      <section className="py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4 text-center">
-          <p className="text-gray-600 text-lg leading-relaxed">
+          <div className="line-accent mx-auto mb-6" />
+          <p className="text-gray-500 text-lg leading-relaxed">
             Desde recorridos completos de varios días hasta promociones
             especiales por temporada, todos nuestros paquetes incluyen
             hospedaje con aliados como <strong>Hoteles Axkan</strong> y visitas
@@ -108,13 +114,13 @@ export default function PaquetesPage() {
       </section>
 
       {/* Paquetes */}
-      <section className="py-12 md:py-16 bg-light">
+      <section className="py-16 md:py-20 bg-light">
         <div className="mx-auto max-w-7xl px-4 space-y-8">
           {paquetes.map((paq) => (
             <div
               key={paq.nombre}
-              className={`bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow ${
-                paq.destacado ? "ring-2 ring-primary" : ""
+              className={`bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 ${
+                paq.destacado ? "ring-2 ring-primary shadow-lg shadow-primary/10" : "border border-gray-100"
               }`}
             >
               <div className="grid md:grid-cols-2">

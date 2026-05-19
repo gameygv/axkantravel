@@ -52,24 +52,29 @@ const faqs = [
 export default function FAQPage() {
   return (
     <>
-      <section className="bg-secondary py-16 md:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">
+      <section className="relative bg-gradient-to-r from-secondary via-secondary to-accent py-20 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '32px 32px'}} />
+        <div className="relative mx-auto max-w-4xl px-4 text-center text-white animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 mb-6">
+            <span className="text-xs font-medium tracking-[0.15em] uppercase">Dudas</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">
             Preguntas Frecuentes
           </h1>
-          <p className="text-lg md:text-xl opacity-90">
+          <p className="text-lg md:text-xl opacity-80">
             Todo lo que necesitas saber antes de viajar con nosotros
           </p>
         </div>
       </section>
 
-      <section className="py-16 md:py-20 bg-white">
+      <section className="py-16 md:py-24 bg-white">
         <div className="mx-auto max-w-3xl px-4">
+          <div className="line-accent mb-10" />
           <div className="space-y-4">
             {faqs.map((faq, i) => (
               <details
                 key={i}
-                className="group rounded-2xl border border-gray-200 bg-white overflow-hidden"
+                className="group rounded-2xl border border-gray-200 bg-white overflow-hidden hover:border-secondary/30 hover:shadow-md transition-all"
               >
                 <summary className="flex cursor-pointer items-center justify-between p-6 font-semibold text-gray-900 hover:text-primary transition-colors">
                   <span>{faq.pregunta}</span>

@@ -11,10 +11,14 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      <section className="bg-accent py-16 md:py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center text-white">
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Blog</h1>
-          <p className="text-lg md:text-xl opacity-90">
+      <section className="relative bg-gradient-to-r from-accent via-accent to-secondary py-20 md:py-24 overflow-hidden">
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '32px 32px'}} />
+        <div className="relative mx-auto max-w-4xl px-4 text-center text-white animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-5 py-2 mb-6">
+            <span className="text-xs font-medium tracking-[0.15em] uppercase">Artículos</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Blog</h1>
+          <p className="text-lg md:text-xl opacity-80">
             Consejos, guías y todo lo que necesitas saber sobre Chiapas
           </p>
         </div>
