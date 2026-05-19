@@ -34,9 +34,9 @@ export default function ContactoPage() {
                 method="POST"
                 className="space-y-5"
               >
-                <input type="hidden" name="_subject" value="Nueva cotización desde axkantravel.dockerapps.top" />
+                <input type="hidden" name="_subject" value="Nueva cotización desde axkantravel.com" />
                 <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_next" value="https://axkantravel.dockerapps.top/contacto" />
+                <input type="hidden" name="_next" value="https://axkantravel.com/contacto" />
 
                 <div>
                   <label htmlFor="nombre" className="block text-sm font-medium text-gray-700 mb-1">

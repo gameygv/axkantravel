@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Axkan Travel — Disfruta Chiapas",
     description:
       "Paquetes turísticos completos para recorrer Chiapas con seguridad y confianza.",
-    url: "https://axkantravel.dockerapps.top",
+    url: "https://axkantravel.com",
     siteName: "Axkan Travel",
     locale: "es_MX",
     type: "website",
