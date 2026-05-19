@@ -32,15 +32,18 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/logo.jpg"
             alt="Axkan Travel — Disfruta Chiapas"
-            width={140}
-            height={56}
-            className="h-14 w-auto rounded-lg"
+            width={210}
+            height={84}
+            className="h-[5.25rem] w-auto rounded-lg"
             priority
           />
+          <span className="text-xl font-bold text-primary hidden sm:inline">
+            Axkan Travel
+          </span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7">
